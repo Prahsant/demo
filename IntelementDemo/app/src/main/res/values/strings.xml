@@ -5,4 +5,6 @@
     <string name="red_button">Red</string>
     <string name="blue_button">Blue</string>
     <string name="green_button">Green</string>
+    <string name="action_scenario1">Scenario 1</string>
+    <string name="action_scenario2">Scenario 2</string>
 </resources>

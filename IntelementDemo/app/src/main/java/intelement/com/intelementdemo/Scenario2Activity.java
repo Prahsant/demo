@@ -1,6 +1,5 @@
 package intelement.com.intelementdemo;
 
-import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -8,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -27,8 +28,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class Senario2Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener{
-    private static String TAG = Senario2Activity.class.getName();
+public class Scenario2Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener{
+    private static String TAG = Scenario2Activity.class.getName();
     private Spinner spinner;
 
     @Override
@@ -126,6 +127,30 @@ public class Senario2Activity extends AppCompatActivity implements AdapterView.O
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
             this.startActivity(intent);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_scenario2, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_scenario1) {
+            startActivity(new Intent(this,Scenario1Activity.class));
+            finish();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private static class LocationAdapter extends ArrayAdapter <LocationInfo>{

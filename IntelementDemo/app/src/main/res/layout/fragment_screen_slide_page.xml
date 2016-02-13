@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ababab"
-    android:onClick="onScreenClick">
+    android:id="@+id/screenLayout">
     <TextView style="?android:textAppearanceMedium"
         android:padding="15dp"
         android:id="@+id/txtScreenId"
