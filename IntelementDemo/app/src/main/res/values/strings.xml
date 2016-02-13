@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IntelementDemo</string>
+    <string name="mode_of_transport">Mode of transport :</string>
+    <string name="navigate_button">Navigate</string>
+    <string name="red_button">Red</string>
+    <string name="blue_button">Blue</string>
+    <string name="green_button">Green</string>
+</resources>
